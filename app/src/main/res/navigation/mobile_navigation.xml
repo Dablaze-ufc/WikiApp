@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.dablaze.wikiapp.ui.home.HomeFragment"
+        android:name="com.dablaze.wikiapp.ui.home.ExploreFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_explore" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.dablaze.wikiapp.ui.dashboard.DashboardFragment"
+        android:name="com.dablaze.wikiapp.ui.dashboard.FavoritesFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_favorities" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.dablaze.wikiapp.ui.notifications.NotificationsFragment"
+        android:name="com.dablaze.wikiapp.ui.notifications.HistoryFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_history" />
 </navigation>
