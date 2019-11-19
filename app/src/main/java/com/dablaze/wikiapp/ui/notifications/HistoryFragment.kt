@@ -8,7 +8,11 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.dablaze.wikiapp.R
+import com.dablaze.wikiapp.adapters.ArticalListRecyclerAdapter
+import kotlinx.android.synthetic.main.fragment_history.*
+import java.lang.ArithmeticException
 
 class HistoryFragment : Fragment() {
 
@@ -18,6 +22,10 @@ class HistoryFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_history, container, false)
+        val view = inflater.inflate(R.layout.fragment_history, container, false)
+        history_recyclerView.layoutManager = LinearLayoutManager(context)
+        history_recyclerView.adapter = ArticalListRecyclerAdapter()
+
+        return view
     }
 }
