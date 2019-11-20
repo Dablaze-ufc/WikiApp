@@ -9,10 +9,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.dablaze.wikiapp.R
 import com.dablaze.wikiapp.adapters.ArticleCardRecyclerAdapter
-import kotlinx.android.synthetic.main.fragment_favorities.*
 
 class FavoritesFragment : Fragment() {
-    val favouritesRecyclerView: RecyclerView? = null
+    private var favouritesRecyclerView: RecyclerView? = null
 
     override
 
@@ -22,8 +21,9 @@ class FavoritesFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_favorities, container, false)
-        favorites_recyclerView.layoutManager = LinearLayoutManager(context)
-        favorites_recyclerView.adapter = ArticleCardRecyclerAdapter()
+        favouritesRecyclerView = view.findViewById(R.id.favorites_recyclerView)
+        favouritesRecyclerView!!.layoutManager = LinearLayoutManager(context)
+        favouritesRecyclerView!!.adapter = ArticleCardRecyclerAdapter()
         return view
     }
 

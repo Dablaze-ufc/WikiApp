@@ -3,10 +3,7 @@ package com.dablaze.wikiapp
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
+
 import com.dablaze.wikiapp.ui.dashboard.FavoritesFragment
 import com.dablaze.wikiapp.ui.home.ExploreFragment
 import com.dablaze.wikiapp.ui.notifications.HistoryFragment
@@ -50,6 +47,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         nav_view.setOnNavigationItemSelectedListener(onNavigationItemSelected)
+
+        setSupportActionBar(toolbar_main)
 
         val transaction = supportFragmentManager.beginTransaction()
         transaction.add(R.id.fragment_holder, exploreFragment)
